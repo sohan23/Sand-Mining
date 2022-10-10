@@ -1,0 +1,22 @@
+var region = geometry;
+var D1 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2000-02-15', '2000-04-15').filterBounds(region);
+var D2 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2000-10-15', '2000-12-15').filterBounds(region);
+var D3 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2005-02-15', '2005-04-15').filterBounds(region);
+var D4 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2005-10-15', '2005-12-15').filterBounds(region);
+var D5 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2010-02-15', '2010-04-15').filterBounds(region);
+var D6 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2010-10-15', '2010-12-15').filterBounds(region);
+var D7 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2015-02-15', '2015-04-15').filterBounds(region);
+
+var D8 = ee.ImageCollection('COPERNICUS/S2').filterDate('2015-10-15', '2015-12-15').filterBounds(region);
+var D9 = ee.ImageCollection('COPERNICUS/S2').filterDate('2016-02-15', '2016-04-15').filterBounds(region);
+var D10 = ee.ImageCollection('COPERNICUS/S2').filterDate('2016-10-15', '2016-12-15').filterBounds(region);
+var D11 = ee.ImageCollection('COPERNICUS/S2').filterDate('2017-02-15', '2017-04-15').filterBounds(region);
+var D12 = ee.ImageCollection('COPERNICUS/S2').filterDate('2017-10-15', '2017-12-15').filterBounds(region);
+var D13 = ee.ImageCollection('COPERNICUS/S2').filterDate('2018-02-15', '2018-04-15').filterBounds(region);
+var D14 = ee.ImageCollection('COPERNICUS/S2').filterDate('2018-10-15', '2018-12-15').filterBounds(region);
+var D15 = ee.ImageCollection('COPERNICUS/S2').filterDate('2019-02-15', '2019-04-15').filterBounds(region);
+var D16 = ee.ImageCollection('COPERNICUS/S2').filterDate('2019-10-15', '2019-12-15').filterBounds(region);
+var D17 = ee.ImageCollection('COPERNICUS/S2').filterDate('2020-02-15', '2020-04-15').filterBounds(region);
+var D18 = ee.ImageCollection('COPERNICUS/S2').filterDate('2020-10-15', '2020-12-15').filterBounds(region);
+var D19 = ee.ImageCollection('COPERNICUS/S2').filterDate('2021-02-15', '2021-04-15').filterBounds(region);
+var D20 = ee.ImageCollection('COPERNICUS/S2').filterDate('2021-10-15', '2021-12-15').filterBounds(region);
