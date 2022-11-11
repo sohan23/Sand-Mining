@@ -88,7 +88,7 @@ Export.image.toDrive({
 });
 
 // Load the image collection.
-var dataset_3 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2005-02-01', '2005-05-31').filterBounds(region);
+var dataset_3 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2005-02-01', '2005-05-31').filterBounds(region);
 print(dataset_3);
 // Compute the median.
 var median_3 = dataset_3.median().clip(region);
@@ -100,7 +100,7 @@ print(bands_3);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_3,
-    description: 'landsat5_premonsoon_2005',
+    description: 'landsat7_premonsoon_2005',
     folder: 'GEE_Image_Composite',
     scale: 30,
     region: region
@@ -133,7 +133,7 @@ Export.image.toDrive({
 });
 
 // Load the image collection.
-var dataset_4 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2005-10-01', '2006-1-31').filterBounds(region);
+var dataset_4 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2005-10-01', '2006-1-31').filterBounds(region);
 print(dataset_4);
 // Compute the median.
 var median_4 = dataset_4.median().clip(region);
@@ -144,7 +144,7 @@ var bands_4 = median_4.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_4,
-    description: 'landsat5_postmonsoon_2005',
+    description: 'landsat7_postmonsoon_2005',
     folder: 'GEE_Image_Composite',
     scale: 30,
     region: region
