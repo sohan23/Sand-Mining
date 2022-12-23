@@ -709,7 +709,7 @@ var dataset_17 = ee.ImageCollection('COPERNICUS/S2').filterDate('2016-02-01', '2
 var median_17 = dataset_17.median();
 
 // Select the bands of interest.
-var bands_17 = median_17.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7','SR_B8']);
+var bands_17 = median_17.select(['B2', 'B3', 'B4', 'B8']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -753,7 +753,7 @@ var dataset_18 = ee.ImageCollection('COPERNICUS/S2').filterDate('2017-02-01', '2
 var median_18 = dataset_18.median();
 
 // Select the bands of interest.
-var bands_18 = median_18.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7', 'SR_B8']);
+var bands_18 = median_18.select(['B2', 'B3', 'B4', 'B8']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -797,7 +797,7 @@ var dataset_19 = ee.ImageCollection('COPERNICUS/S2').filterDate('2018-02-01', '2
 var median_19 = dataset_19.median();
 
 // Select the bands of interest.
-var bands_19 = median_19.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7', 'SR_B8']);
+var bands_19 = median_19.select(['B2', 'B3', 'B4', 'B8']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -841,7 +841,7 @@ var dataset_20 = ee.ImageCollection('COPERNICUS/S2').filterDate('2019-02-01', '2
 var median_20 = dataset_20.median();
 
 // Select the bands of interest.
-var bands_20 = median_20.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7', 'SR_B8']);
+var bands_20 = median_20.select(['B2', 'B3', 'B4', 'B8']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -885,7 +885,7 @@ var dataset_21 = ee.ImageCollection('COPERNICUS/S2').filterDate('2020-02-01', '2
 var median_21 = dataset_21.median();
 
 // Select the bands of interest.
-var bands_21 = median_21.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7', 'SR_B8']);
+var bands_21 = median_21.select(['B2', 'B3', 'B4', 'B8']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -920,4 +920,73 @@ Export.image.toDrive({
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
+});
+
+//for the year 2021
+// Load the image collection.
+var dataset_22 = ee.ImageCollection('COPERNICUS/S2').filterDate('2021-02-01', '2021-05-31').filterBounds(region);
+// Compute the median.
+var median_22 = dataset_22.median();
+
+// Select the bands of interest.
+var bands_22 = median_22.select(['B2', 'B3', 'B4', 'B8']);
+
+// Export the image, specifying scale and region.
+Export.image.toDrive({
+    image: bands_22,
+    description: 'landsat5_premonsoon_2021',
+    folder: 'GEE_Composite',
+    scale: 30,
+    region: region
+});
+
+// Make the training dataset.
+var training22 = bands_22.sample({
+    region: region,
+    scale: 30,
+    numPixels: 9000
+});
+
+// Instantiate the clusterer and train it.
+var clusterer22 = ee.Clusterer.wekaKMeans(13).train(training22);
+
+// Cluster the input using the trained clusterer.
+var result22 = bands_22.cluster(clusterer22).clip(region);
+
+// Display the clusters with random colors.
+Map.addLayer(result22.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_premonsoon_2021');
+print(result22);
+
+// Exporting UC composite
+Export.image.toDrive({
+    image: result22,
+    description: 'UC_premonsoon_2021',
+    folder: 'GEE_Unsupervised',
+    scale: 30,
+    region: region,
+});
+
+//for the year 2022
+// Load the image collection.
+var dataset_23 = ee.ImageCollection('COPERNICUS/S2').filterDate('2022-02-01', '2022-05-31').filterBounds(region);
+// Compute the median.
+var median_23 = dataset_23.median();
+
+// Select the bands of interest.
+var bands_23 = median_23.select(['B2', 'B3', 'B4', 'B8']);
+
+// Export the image, specifying scale and region.
+Export.image.toDrive({
+    image: bands_23,
+    description: 'landsat5_premonsoon_2022',
+    folder: 'GEE_Composite',
+    scale: 30,
+    region: region
+});
+
+// Make the training dataset.
+var training23 = bands_23.sample({
+    region: region,
+    scale: 30,
+    numPixels: 9000
 });
