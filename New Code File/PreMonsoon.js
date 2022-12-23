@@ -716,14 +716,14 @@ Export.image.toDrive({
     image: bands_17,
     description: 'landsat5_premonsoon_2016',
     folder: 'GEE_Composite',
-    scale: 30,
+    scale: 10,
     region: region
 });
 
 // Make the training dataset.
 var training17 = bands_17.sample({
     region: region,
-    scale: 30,
+    scale: 10,
     numPixels: 9000
 });
 
@@ -742,7 +742,7 @@ Export.image.toDrive({
     image: result17,
     description: 'UC_premonsoon_2016',
     folder: 'GEE_Unsupervised',
-    scale: 30,
+    scale: 10,
     region: region,
 });
 
@@ -760,14 +760,14 @@ Export.image.toDrive({
     image: bands_18,
     description: 'landsat5_premonsoon_2017',
     folder: 'GEE_Composite',
-    scale: 30,
+    scale: 10,
     region: region
 });
 
 // Make the training dataset.
 var training18 = bands_18.sample({
     region: region,
-    scale: 30,
+    scale: 10,
     numPixels: 9000
 });
 
@@ -786,7 +786,7 @@ Export.image.toDrive({
     image: result18,
     description: 'UC_premonsoon_2017',
     folder: 'GEE_Unsupervised',
-    scale: 30,
+    scale: 10,
     region: region,
 });
 
@@ -804,14 +804,14 @@ Export.image.toDrive({
     image: bands_19,
     description: 'landsat5_premonsoon_2018',
     folder: 'GEE_Composite',
-    scale: 30,
+    scale: 10,
     region: region
 });
 
 // Make the training dataset.
 var training19 = bands_19.sample({
     region: region,
-    scale: 30,
+    scale: 10,
     numPixels: 9000
 });
 
@@ -830,7 +830,7 @@ Export.image.toDrive({
     image: result19,
     description: 'UC_premonsoon_2018',
     folder: 'GEE_Unsupervised',
-    scale: 30,
+    scale: 10,
     region: region,
 });
 
@@ -848,14 +848,14 @@ Export.image.toDrive({
     image: bands_20,
     description: 'landsat5_premonsoon_2019',
     folder: 'GEE_Composite',
-    scale: 30,
+    scale: 10,
     region: region
 });
 
 // Make the training dataset.
 var training20 = bands_20.sample({
     region: region,
-    scale: 30,
+    scale: 10,
     numPixels: 9000
 });
 
@@ -874,7 +874,7 @@ Export.image.toDrive({
     image: result20,
     description: 'UC_premonsoon_2019',
     folder: 'GEE_Unsupervised',
-    scale: 30,
+    scale: 10,
     region: region,
 });
 
@@ -892,14 +892,14 @@ Export.image.toDrive({
     image: bands_21,
     description: 'landsat5_premonsoon_2020',
     folder: 'GEE_Composite',
-    scale: 30,
+    scale: 10,
     region: region
 });
 
 // Make the training dataset.
 var training21 = bands_21.sample({
     region: region,
-    scale: 30,
+    scale: 10,
     numPixels: 9000
 });
 
@@ -918,7 +918,7 @@ Export.image.toDrive({
     image: result21,
     description: 'UC_premonsoon_2020',
     folder: 'GEE_Unsupervised',
-    scale: 30,
+    scale: 10,
     region: region,
 });
 
@@ -936,14 +936,14 @@ Export.image.toDrive({
     image: bands_22,
     description: 'landsat5_premonsoon_2021',
     folder: 'GEE_Composite',
-    scale: 30,
+    scale: 10,
     region: region
 });
 
 // Make the training dataset.
 var training22 = bands_22.sample({
     region: region,
-    scale: 30,
+    scale: 10,
     numPixels: 9000
 });
 
@@ -962,7 +962,7 @@ Export.image.toDrive({
     image: result22,
     description: 'UC_premonsoon_2021',
     folder: 'GEE_Unsupervised',
-    scale: 30,
+    scale: 10,
     region: region,
 });
 
@@ -980,13 +980,33 @@ Export.image.toDrive({
     image: bands_23,
     description: 'landsat5_premonsoon_2022',
     folder: 'GEE_Composite',
-    scale: 30,
+    scale: 10,
     region: region
 });
 
 // Make the training dataset.
 var training23 = bands_23.sample({
     region: region,
-    scale: 30,
+    scale: 10,
     numPixels: 9000
 });
+
+// Instantiate the clusterer and train it.
+var clusterer23 = ee.Clusterer.wekaKMeans(13).train(training23);
+
+// Cluster the input using the trained clusterer.
+var result23 = bands_23.cluster(clusterer23).clip(region);
+
+// Display the clusters with random colors.
+Map.addLayer(result23.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_premonsoon_2022');
+print(result23);
+
+// Exporting UC composite
+Export.image.toDrive({
+    image: result23,
+    description: 'UC_premonsoon_2022',
+    folder: 'GEE_Unsupervised',
+    scale: 10,
+    region: region,
+});
+
