@@ -704,7 +704,7 @@ Export.image.toDrive({
 
 //for the year 2016
 // Load the image collection.
-var dataset_17 = ee.ImageCollection('COPERNICUS/S2').filterDate('2016-02-01', '2016-05-31').filterBounds(region);
+var dataset_17 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2016-02-01', '2016-05-31').filterBounds(region);
 // Compute the median.
 var median_17 = dataset_17.median();
 
@@ -748,7 +748,7 @@ Export.image.toDrive({
 
 //for the year 2017
 // Load the image collection.
-var dataset_18 = ee.ImageCollection('COPERNICUS/S2').filterDate('2017-02-01', '2017-05-31').filterBounds(region);
+var dataset_18 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2017-02-01', '2017-05-31').filterBounds(region);
 // Compute the median.
 var median_18 = dataset_18.median();
 
@@ -792,7 +792,7 @@ Export.image.toDrive({
 
 //for the year 2018
 // Load the image collection.
-var dataset_19 = ee.ImageCollection('COPERNICUS/S2').filterDate('2018-02-01', '2018-05-31').filterBounds(region);
+var dataset_19 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2018-02-01', '2018-05-31').filterBounds(region);
 // Compute the median.
 var median_19 = dataset_19.median();
 
@@ -836,7 +836,7 @@ Export.image.toDrive({
 
 //for the year 2019
 // Load the image collection.
-var dataset_20 = ee.ImageCollection('COPERNICUS/S2').filterDate('2019-02-01', '2019-05-31').filterBounds(region);
+var dataset_20 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2019-02-01', '2019-05-31').filterBounds(region);
 // Compute the median.
 var median_20 = dataset_20.median();
 
@@ -880,7 +880,7 @@ Export.image.toDrive({
 
 //for the year 2020
 // Load the image collection.
-var dataset_21 = ee.ImageCollection('COPERNICUS/S2').filterDate('2020-02-01', '2020-05-31').filterBounds(region);
+var dataset_21 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2020-02-01', '2020-05-31').filterBounds(region);
 // Compute the median.
 var median_21 = dataset_21.median();
 
@@ -924,7 +924,7 @@ Export.image.toDrive({
 
 //for the year 2021
 // Load the image collection.
-var dataset_22 = ee.ImageCollection('COPERNICUS/S2').filterDate('2021-02-01', '2021-05-31').filterBounds(region);
+var dataset_22 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2021-02-01', '2021-05-31').filterBounds(region);
 // Compute the median.
 var median_22 = dataset_22.median();
 
@@ -968,7 +968,7 @@ Export.image.toDrive({
 
 //for the year 2022
 // Load the image collection.
-var dataset_23 = ee.ImageCollection('COPERNICUS/S2').filterDate('2022-02-01', '2022-05-31').filterBounds(region);
+var dataset_23 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2022-02-01', '2022-05-31').filterBounds(region);
 // Compute the median.
 var median_23 = dataset_23.median();
 
