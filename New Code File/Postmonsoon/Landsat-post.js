@@ -616,7 +616,7 @@ Export.image.toDrive({
 
 //for the year 2014
 // Load the image collection.
-var dataset_15 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2014-02-01', '2014-05-31').filterBounds(region);
+var dataset_15 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2014-02-01', '2014-05-31').filterBounds(region);
 // Compute the median.
 var median_15 = dataset_15.median();
 print(median_15);
@@ -660,7 +660,7 @@ Export.image.toDrive({
 
 //for the year 2015
 // Load the image collection.
-var dataset_16 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2015-02-01', '2015-05-31').filterBounds(region);
+var dataset_16 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2015-02-01', '2015-05-31').filterBounds(region);
 // Compute the median.
 var median_16 = dataset_16.median();
 
