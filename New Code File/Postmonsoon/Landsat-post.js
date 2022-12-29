@@ -685,7 +685,7 @@ var training16 = bands_16.sample({
 
 // Instantiate the clusterer and train it.
 var clusterer16 = ee.Clusterer.wekaKMeans(13).train(training16);
-2016
+
 // Cluster the input using the trained clusterer.
 var result16 = bands_16.cluster(clusterer16).clip(region);
 
