@@ -10,7 +10,7 @@ print(bands_1);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_1,
-    description: 'landsat5_premonsoon_2000',
+    description: 'composite_premonsoon_2000',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -54,7 +54,7 @@ print(bands_2);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_2,
-    description: 'landsat5_premonsoon_2001',
+    description: 'composite_premonsoon_2001',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -98,7 +98,7 @@ print(bands_3);
 // Export the image, specifying scale and region.       
 Export.image.toDrive({
     image: bands_3,
-    description: 'landsat5_premonsoon_2002',
+    description: 'composite_premonsoon_2002',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -142,7 +142,7 @@ print(bands_4);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_4,
-    description: 'landsat5_premonsoon_2003',
+    description: 'composite_premonsoon_2003',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -186,7 +186,7 @@ print(bands_5);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_5,
-    description: 'landsat5_premonsoon_2004',
+    description: 'composite_premonsoon_2004',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -230,7 +230,7 @@ print(bands_6);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_6,
-    description: 'landsat5_premonsoon_2005',
+    description: 'composite_premonsoon_2005',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -274,7 +274,7 @@ print(bands_7);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_7,
-    description: 'landsat5_premonsoon_2006',
+    description: 'composite_premonsoon_2006',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -318,7 +318,7 @@ print(bands_8);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_8,
-    description: 'landsat5_premonsoon_2007',
+    description: 'composite_premonsoon_2007',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -362,7 +362,7 @@ print(bands_9);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_9,
-    description: 'landsat5_premonsoon_2008',
+    description: 'composite_premonsoon_2008',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -406,7 +406,7 @@ print(bands_10);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_10,
-    description: 'landsat5_premonsoon_2009',
+    description: 'composite_premonsoon_2009',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -450,7 +450,7 @@ print(bands_11);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_11,
-    description: 'landsat5_premonsoon_2010',
+    description: 'composite_premonsoon_2010',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -494,7 +494,7 @@ print(bands_12);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_12,
-    description: 'landsat5_premonsoon_2011',
+    description: 'composite_premonsoon_2011',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -538,7 +538,7 @@ print(bands_13);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_13,
-    description: 'landsat5_premonsoon_2012',
+    description: 'composite_premonsoon_2012',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -582,7 +582,7 @@ print(bands_14);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_14,
-    description: 'landsat5_premonsoon_2013',
+    description: 'composite_premonsoon_2013',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -626,7 +626,7 @@ print(bands_15);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_15,
-    description: 'landsat5_premonsoon_2014',
+    description: 'composite_premonsoon_2014',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -670,7 +670,7 @@ var bands_16 = median_16.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_16,
-    description: 'landsat5_premonsoon_2015',
+    description: 'composite_premonsoon_2015',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -714,16 +714,16 @@ var bands_17 = median_17.select(['SR_B2','SR_B3','SR_B4','SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_17,
-    description: 'landsat5_premonsoon_2016',
+    description: 'composite_premonsoon_2016',
     folder: 'GEE_Composite',
-    scale: 10,
+    scale:30,
     region: region
 });
 
 // Make the training dataset.
 var training17 = bands_17.sample({
     region: region,
-    scale: 10,
+    scale:30,
     numPixels: 9000
 });
 
@@ -742,7 +742,7 @@ Export.image.toDrive({
     image: result17,
     description: 'UC_premonsoon_2016',
     folder: 'GEE_Unsupervised',
-    scale: 10,
+    scale:30,
     region: region,
 });
 
@@ -758,16 +758,16 @@ var bands_18 = median_18.select(['SR_B2','SR_B3','SR_B4','SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_18,
-    description: 'landsat5_premonsoon_2017',
+    description: 'composite_premonsoon_2017',
     folder: 'GEE_Composite',
-    scale: 10,
+    scale:30,
     region: region
 });
 
 // Make the training dataset.
 var training18 = bands_18.sample({
     region: region,
-    scale: 10,
+    scale:30,
     numPixels: 9000
 });
 
@@ -786,7 +786,7 @@ Export.image.toDrive({
     image: result18,
     description: 'UC_premonsoon_2017',
     folder: 'GEE_Unsupervised',
-    scale: 10,
+    scale:30,
     region: region,
 });
 
@@ -802,16 +802,16 @@ var bands_19 = median_19.select(['SR_B2','SR_B3','SR_B4','SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_19,
-    description: 'landsat5_premonsoon_2018',
+    description: 'composite_premonsoon_2018',
     folder: 'GEE_Composite',
-    scale: 10,
+    scale:30,
     region: region
 });
 
 // Make the training dataset.
 var training19 = bands_19.sample({
     region: region,
-    scale: 10,
+    scale:30,
     numPixels: 9000
 });
 
@@ -830,7 +830,7 @@ Export.image.toDrive({
     image: result19,
     description: 'UC_premonsoon_2018',
     folder: 'GEE_Unsupervised',
-    scale: 10,
+    scale:30,
     region: region,
 });
 
@@ -846,16 +846,16 @@ var bands_20 = median_20.select(['SR_B2','SR_B3','SR_B4','SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_20,
-    description: 'landsat5_premonsoon_2019',
+    description: 'composite_premonsoon_2019',
     folder: 'GEE_Composite',
-    scale: 10,
+    scale:30,
     region: region
 });
 
 // Make the training dataset.
 var training20 = bands_20.sample({
     region: region,
-    scale: 10,
+    scale:30,
     numPixels: 9000
 });
 
@@ -874,7 +874,7 @@ Export.image.toDrive({
     image: result20,
     description: 'UC_premonsoon_2019',
     folder: 'GEE_Unsupervised',
-    scale: 10,
+    scale:30,
     region: region,
 });
 
@@ -890,16 +890,16 @@ var bands_21 = median_21.select(['SR_B2','SR_B3','SR_B4','SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_21,
-    description: 'landsat5_premonsoon_2020',
+    description: 'composite_premonsoon_2020',
     folder: 'GEE_Composite',
-    scale: 10,
+    scale:30,
     region: region
 });
 
 // Make the training dataset.
 var training21 = bands_21.sample({
     region: region,
-    scale: 10,
+    scale:30,
     numPixels: 9000
 });
 
@@ -918,7 +918,7 @@ Export.image.toDrive({
     image: result21,
     description: 'UC_premonsoon_2020',
     folder: 'GEE_Unsupervised',
-    scale: 10,
+    scale:30,
     region: region,
 });
 
@@ -934,16 +934,16 @@ var bands_22 = median_22.select(['SR_B2','SR_B3','SR_B4','SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_22,
-    description: 'landsat5_premonsoon_2021',
+    description: 'composite_premonsoon_2021',
     folder: 'GEE_Composite',
-    scale: 10,
+    scale:30,
     region: region
 });
 
 // Make the training dataset.
 var training22 = bands_22.sample({
     region: region,
-    scale: 10,
+    scale:30,
     numPixels: 9000
 });
 
@@ -962,7 +962,7 @@ Export.image.toDrive({
     image: result22,
     description: 'UC_premonsoon_2021',
     folder: 'GEE_Unsupervised',
-    scale: 10,
+    scale:30,
     region: region,
 });
 
@@ -978,16 +978,16 @@ var bands_23 = median_23.select(['SR_B2','SR_B3','SR_B4','SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_23,
-    description: 'landsat5_premonsoon_2022',
+    description: 'composite_premonsoon_2022',
     folder: 'GEE_Composite',
-    scale: 10,
+    scale:30,
     region: region
 });
 
 // Make the training dataset.
 var training23 = bands_23.sample({
     region: region,
-    scale: 10,
+    scale:30,
     numPixels: 9000
 });
 
@@ -1006,7 +1006,7 @@ Export.image.toDrive({
     image: result23,
     description: 'UC_premonsoon_2022',
     folder: 'GEE_Unsupervised',
-    scale: 10,
+    scale:30,
     region: region,
 });
 
