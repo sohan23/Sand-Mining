@@ -10,7 +10,7 @@ var bands_17 = median_17.select(['B2', 'B3', 'B4', 'B8']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_17,
-    description: 'landsat5_premonsoon_2016',
+    description: 'Sentinel-premonsoon_2016',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -36,7 +36,7 @@ print(result17);
 // Exporting UC composite
 Export.image.toDrive({
     image: result17,
-    description: 'UC_premonsoon_2016',
+    description: 'Sentinel_UC_premonsoon_2016',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -54,7 +54,7 @@ var bands_18 = median_18.select(['B2', 'B3', 'B4', 'B8']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_18,
-    description: 'landsat5_premonsoon_2017',
+    description: 'Sentinel-premonsoon_2017',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -80,7 +80,7 @@ print(result18);
 // Exporting UC composite
 Export.image.toDrive({
     image: result18,
-    description: 'UC_premonsoon_2017',
+    description: 'Sentinel_UC_premonsoon_2017',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -98,7 +98,7 @@ var bands_19 = median_19.select(['B2', 'B3', 'B4', 'B8']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_19,
-    description: 'landsat5_premonsoon_2018',
+    description: 'Sentinel-premonsoon_2018',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -124,7 +124,7 @@ print(result19);
 // Exporting UC composite
 Export.image.toDrive({
     image: result19,
-    description: 'UC_premonsoon_2018',
+    description: 'Sentinel_UC_premonsoon_2018',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -142,7 +142,7 @@ var bands_20 = median_20.select(['B2', 'B3', 'B4', 'B8']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_20,
-    description: 'landsat5_premonsoon_2019',
+    description: 'Sentinel-premonsoon_2019',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -168,7 +168,7 @@ print(result20);
 // Exporting UC composite
 Export.image.toDrive({
     image: result20,
-    description: 'UC_premonsoon_2019',
+    description: 'Sentinel_UC_premonsoon_2019',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -186,7 +186,7 @@ var bands_21 = median_21.select(['B2', 'B3', 'B4', 'B8']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_21,
-    description: 'landsat5_premonsoon_2020',
+    description: 'Sentinel-premonsoon_2020',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -212,7 +212,7 @@ print(result21);
 // Exporting UC composite
 Export.image.toDrive({
     image: result21,
-    description: 'UC_premonsoon_2020',
+    description: 'Sentinel_UC_premonsoon_2020',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -230,7 +230,7 @@ var bands_22 = median_22.select(['B2', 'B3', 'B4', 'B8']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_22,
-    description: 'landsat5_premonsoon_2021',
+    description: 'Sentinel-premonsoon_2021',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -256,7 +256,7 @@ print(result22);
 // Exporting UC composite
 Export.image.toDrive({
     image: result22,
-    description: 'UC_premonsoon_2021',
+    description: 'Sentinel_UC_premonsoon_2021',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -274,7 +274,7 @@ var bands_23 = median_23.select(['B2', 'B3', 'B4', 'B8']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_23,
-    description: 'landsat5_premonsoon_2022',
+    description: 'Sentinel-premonsoon_2022',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -300,7 +300,7 @@ print(result23);
 // Exporting UC composite
 Export.image.toDrive({
     image: result23,
-    description: 'UC_premonsoon_2022',
+    description: 'Sentinel_UC_premonsoon_2022',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
