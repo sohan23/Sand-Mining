@@ -5,7 +5,7 @@ var dataset_1 = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2').filterDate('2000-02
 var median_1 = dataset_1.median();
 print(median_1);
 // Select the bands of interest.
-var bands_1 = median_1.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_1 = median_1.select(['SR_B1','SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_1);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -49,7 +49,7 @@ var dataset_2 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2001-02
 var median_2 = dataset_2.median();
 print(median_2);
 // Select the bands of interest.
-var bands_2 = median_2.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_2 = median_2.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_2);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -93,7 +93,7 @@ var dataset_3 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2002-02
 var median_3 = dataset_3.median();
 print(median_3);
 // Select the bands of interest.
-var bands_3 = median_3.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_3 = median_3.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_3);
 // Export the image, specifying scale and region.       
 Export.image.toDrive({
@@ -137,7 +137,7 @@ var dataset_4 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2003-02
 var median_4 = dataset_4.median();
 print(median_4);
 // Select the bands of interest.
-var bands_4 = median_4.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_4 = median_4.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_4);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -181,7 +181,7 @@ var dataset_5 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2004-02
 var median_5 = dataset_5.median();
 print(median_5);
 // Select the bands of interest.
-var bands_5 = median_5.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_5 = median_5.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_5);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -225,7 +225,7 @@ var dataset_6 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2005-02
 var median_6 = dataset_6.median();
 print(median_6);
 // Select the bands of interest.
-var bands_6 = median_6.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_6 = median_6.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_6);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -269,7 +269,7 @@ var dataset_7 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2006-02
 var median_7 = dataset_7.median();
 print(median_7);
 // Select the bands of interest.
-var bands_7 = median_7.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_7 = median_7.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_7);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -313,7 +313,7 @@ var dataset_8 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2007-02
 var median_8 = dataset_8.median();
 print(median_8);
 // Select the bands of interest.
-var bands_8 = median_8.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_8 = median_8.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_8);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -357,7 +357,7 @@ var dataset_9 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2008-02
 var median_9 = dataset_9.median();
 print(median_9);
 // Select the bands of interest.
-var bands_9 = median_9.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_9 = median_9.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_9);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -401,7 +401,7 @@ var dataset_10 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2009-0
 var median_10 = dataset_10.median();
 print(median_10);
 // Select the bands of interest.
-var bands_10 = median_10.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_10 = median_10.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_10);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -445,7 +445,7 @@ var dataset_11 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2010-0
 var median_11 = dataset_11.median();
 print(median_11);
 // Select the bands of interest.
-var bands_11 = median_11.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_11 = median_11.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_11);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -489,7 +489,7 @@ var dataset_12 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2011-0
 var median_12 = dataset_12.median();
 print(median_12);
 // Select the bands of interest.
-var bands_12 = median_12.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_12 = median_12.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_12);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -533,7 +533,7 @@ var dataset_13 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2012-0
 var median_13 = dataset_13.median();
 print(median_13);
 // Select the bands of interest.
-var bands_13 = median_13.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_13 = median_13.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_13);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -577,7 +577,7 @@ var dataset_14 = ee.ImageCollection('LANDSAT/LE07/C02/T1_L2').filterDate('2013-0
 var median_14 = dataset_14.median();
 print(median_14);
 // Select the bands of interest.
-var bands_14 = median_14.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_14 = median_14.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_14);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -621,7 +621,7 @@ var dataset_15 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2014-0
 var median_15 = dataset_15.median();
 print(median_15);
 // Select the bands of interest.
-var bands_15 = median_15.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_15 = median_15.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 print(bands_15);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -665,7 +665,7 @@ var dataset_16 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2015-0
 var median_16 = dataset_16.median();
 
 // Select the bands of interest.
-var bands_16 = median_16.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B7']);
+var bands_16 = median_16.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -709,7 +709,7 @@ var dataset_17 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2016-0
 var median_17 = dataset_17.median();
 
 // Select the bands of interest.
-var bands_17 = median_17.select(['B2', 'B3', 'B4', 'B8']);
+var bands_17 = median_17.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -753,7 +753,7 @@ var dataset_18 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2017-0
 var median_18 = dataset_18.median();
 
 // Select the bands of interest.
-var bands_18 = median_18.select(['B2', 'B3', 'B4', 'B8']);
+var bands_18 = median_18.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -797,7 +797,7 @@ var dataset_19 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2018-0
 var median_19 = dataset_19.median();
 
 // Select the bands of interest.
-var bands_19 = median_19.select(['B2', 'B3', 'B4', 'B8']);
+var bands_19 = median_19.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -841,7 +841,7 @@ var dataset_20 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2019-0
 var median_20 = dataset_20.median();
 
 // Select the bands of interest.
-var bands_20 = median_20.select(['B2', 'B3', 'B4', 'B8']);
+var bands_20 = median_20.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -885,7 +885,7 @@ var dataset_21 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2020-0
 var median_21 = dataset_21.median();
 
 // Select the bands of interest.
-var bands_21 = median_21.select(['B2', 'B3', 'B4', 'B8']);
+var bands_21 = median_21.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -929,7 +929,7 @@ var dataset_22 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2021-0
 var median_22 = dataset_22.median();
 
 // Select the bands of interest.
-var bands_22 = median_22.select(['B2', 'B3', 'B4', 'B8']);
+var bands_22 = median_22.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
@@ -973,7 +973,7 @@ var dataset_23 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2').filterDate('2022-0
 var median_23 = dataset_23.median();
 
 // Select the bands of interest.
-var bands_23 = median_23.select(['B2', 'B3', 'B4', 'B8']);
+var bands_23 = median_23.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 
 // Export the image, specifying scale and region.
 Export.image.toDrive({
