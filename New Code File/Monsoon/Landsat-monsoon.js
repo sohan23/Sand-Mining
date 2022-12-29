@@ -10,7 +10,7 @@ print(bands_1);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_1,
-    description: 'landsat5_postmonsoon_2000',
+    description: 'landsat5_monsoon_2000',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -30,13 +30,13 @@ var clusterer1 = ee.Clusterer.wekaKMeans(13).train(training1);
 var result1 = bands_1.cluster(clusterer1).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result1.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2000');
+Map.addLayer(result1.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2000');
 print(result1);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result1,
-    description: 'UC_postmonsoon_2000',
+    description: 'UC_monsoon_2000',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -54,7 +54,7 @@ print(bands_2);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_2,
-    description: 'landsat5_postmonsoon_2001',
+    description: 'landsat5_monsoon_2001',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -74,13 +74,13 @@ var clusterer2 = ee.Clusterer.wekaKMeans(13).train(training2);
 var result2 = bands_2.cluster(clusterer2).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result2.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2001');
+Map.addLayer(result2.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2001');
 print(result2);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result2,
-    description: 'UC_postmonsoon_2001',
+    description: 'UC_monsoon_2001',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -98,7 +98,7 @@ print(bands_3);
 // Export the image, specifying scale and region.       
 Export.image.toDrive({
     image: bands_3,
-    description: 'landsat5_postmonsoon_2002',
+    description: 'landsat5_monsoon_2002',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -118,13 +118,13 @@ var clusterer3 = ee.Clusterer.wekaKMeans(13).train(training3);
 var result3 = bands_3.cluster(clusterer3).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result3.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2002');
+Map.addLayer(result3.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2002');
 print(result3);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result3,
-    description: 'UC_postmonsoon_2002',
+    description: 'UC_monsoon_2002',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -142,7 +142,7 @@ print(bands_4);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_4,
-    description: 'landsat5_postmonsoon_2003',
+    description: 'landsat5_monsoon_2003',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -162,13 +162,13 @@ var clusterer4 = ee.Clusterer.wekaKMeans(13).train(training4);
 var result4 = bands_4.cluster(clusterer4).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result4.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2003');
+Map.addLayer(result4.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2003');
 print(result4);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result4,
-    description: 'UC_postmonsoon_2003',
+    description: 'UC_monsoon_2003',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -186,7 +186,7 @@ print(bands_5);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_5,
-    description: 'landsat5_postmonsoon_2004',
+    description: 'landsat5_monsoon_2004',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -206,13 +206,13 @@ var clusterer5 = ee.Clusterer.wekaKMeans(13).train(training5);
 var result5 = bands_5.cluster(clusterer5).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result5.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2004');
+Map.addLayer(result5.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2004');
 print(result5);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result5,
-    description: 'UC_postmonsoon_2004',
+    description: 'UC_monsoon_2004',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -230,7 +230,7 @@ print(bands_6);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_6,
-    description: 'landsat5_postmonsoon_2005',
+    description: 'landsat5_monsoon_2005',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -250,13 +250,13 @@ var clusterer6 = ee.Clusterer.wekaKMeans(13).train(training6);
 var result6 = bands_6.cluster(clusterer6).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result6.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2005');
+Map.addLayer(result6.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2005');
 print(result6);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result6,
-    description: 'UC_postmonsoon_2005',
+    description: 'UC_monsoon_2005',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -274,7 +274,7 @@ print(bands_7);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_7,
-    description: 'landsat5_postmonsoon_2006',
+    description: 'landsat5_monsoon_2006',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -294,13 +294,13 @@ var clusterer7 = ee.Clusterer.wekaKMeans(13).train(training7);
 var result7 = bands_7.cluster(clusterer7).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result7.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2006');
+Map.addLayer(result7.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2006');
 print(result7);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result7,
-    description: 'UC_postmonsoon_2006',
+    description: 'UC_monsoon_2006',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -318,7 +318,7 @@ print(bands_8);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_8,
-    description: 'landsat5_postmonsoon_2007',
+    description: 'landsat5_monsoon_2007',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -338,13 +338,13 @@ var clusterer8 = ee.Clusterer.wekaKMeans(13).train(training8);
 var result8 = bands_8.cluster(clusterer8).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result8.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2007');
+Map.addLayer(result8.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2007');
 print(result8);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result8,
-    description: 'UC_postmonsoon_2007',
+    description: 'UC_monsoon_2007',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -362,7 +362,7 @@ print(bands_9);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_9,
-    description: 'landsat5_postmonsoon_2008',
+    description: 'landsat5_monsoon_2008',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -382,13 +382,13 @@ var clusterer9 = ee.Clusterer.wekaKMeans(13).train(training9);
 var result9 = bands_9.cluster(clusterer9).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result9.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2008');
+Map.addLayer(result9.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2008');
 print(result9);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result9,
-    description: 'UC_postmonsoon_2008',
+    description: 'UC_monsoon_2008',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -406,7 +406,7 @@ print(bands_10);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_10,
-    description: 'landsat5_postmonsoon_2009',
+    description: 'landsat5_monsoon_2009',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -426,13 +426,13 @@ var clusterer10 = ee.Clusterer.wekaKMeans(13).train(training10);
 var result10 = bands_10.cluster(clusterer10).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result10.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2009');
+Map.addLayer(result10.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2009');
 print(result10);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result10,
-    description: 'UC_postmonsoon_2009',
+    description: 'UC_monsoon_2009',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -450,7 +450,7 @@ print(bands_11);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_11,
-    description: 'landsat5_postmonsoon_2010',
+    description: 'landsat5_monsoon_2010',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -470,13 +470,13 @@ var clusterer11 = ee.Clusterer.wekaKMeans(13).train(training11);
 var result11 = bands_11.cluster(clusterer11).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result11.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2010');
+Map.addLayer(result11.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2010');
 print(result11);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result11,
-    description: 'UC_postmonsoon_2010',
+    description: 'UC_monsoon_2010',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -494,7 +494,7 @@ print(bands_12);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_12,
-    description: 'landsat5_postmonsoon_2011',
+    description: 'landsat5_monsoon_2011',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -514,13 +514,13 @@ var clusterer12 = ee.Clusterer.wekaKMeans(13).train(training12);
 var result12 = bands_12.cluster(clusterer12).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result12.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2011');
+Map.addLayer(result12.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2011');
 print(result12);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result12,
-    description: 'UC_postmonsoon_2011',
+    description: 'UC_monsoon_2011',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -538,7 +538,7 @@ print(bands_13);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_13,
-    description: 'landsat5_postmonsoon_2012',
+    description: 'landsat5_monsoon_2012',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -558,13 +558,13 @@ var clusterer13 = ee.Clusterer.wekaKMeans(13).train(training13);
 var result13 = bands_13.cluster(clusterer13).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result13.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2012');
+Map.addLayer(result13.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2012');
 print(result13);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result13,
-    description: 'UC_postmonsoon_2012',
+    description: 'UC_monsoon_2012',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -582,7 +582,7 @@ print(bands_14);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_14,
-    description: 'landsat5_postmonsoon_2013',
+    description: 'landsat5_monsoon_2013',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -602,13 +602,13 @@ var clusterer14 = ee.Clusterer.wekaKMeans(13).train(training14);
 var result14 = bands_14.cluster(clusterer14).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result14.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2013');
+Map.addLayer(result14.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2013');
 print(result14);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result14,
-    description: 'UC_postmonsoon_2013',
+    description: 'UC_monsoon_2013',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -626,7 +626,7 @@ print(bands_15);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_15,
-    description: 'landsat5_postmonsoon_2014',
+    description: 'landsat5_monsoon_2014',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -646,13 +646,13 @@ var clusterer15 = ee.Clusterer.wekaKMeans(13).train(training15);
 var result15 = bands_15.cluster(clusterer15).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result15.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2014');
+Map.addLayer(result15.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2014');
 print(result15);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result15,
-    description: 'UC_postmonsoon_2014',
+    description: 'UC_monsoon_2014',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -670,7 +670,7 @@ var bands_16 = median_16.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_16,
-    description: 'landsat5_postmonsoon_2015',
+    description: 'landsat5_monsoon_2015',
     folder: 'GEE_Composite',
     scale: 30,
     region: region
@@ -690,13 +690,13 @@ var clusterer16 = ee.Clusterer.wekaKMeans(13).train(training16);
 var result16 = bands_16.cluster(clusterer16).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result16.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2015');
+Map.addLayer(result16.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2015');
 print(result16);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result16,
-    description: 'UC_postmonsoon_2015',
+    description: 'UC_monsoon_2015',
     folder: 'GEE_Unsupervised',
     scale: 30,
     region: region,
@@ -714,7 +714,7 @@ var bands_17 = median_17.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_17,
-    description: 'landsat5_postmonsoon_2016',
+    description: 'landsat5_monsoon_2016',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -734,13 +734,13 @@ var clusterer17 = ee.Clusterer.wekaKMeans(13).train(training17);
 var result17 = bands_17.cluster(clusterer17).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result17.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2016');
+Map.addLayer(result17.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2016');
 print(result17);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result17,
-    description: 'UC_postmonsoon_2016',
+    description: 'UC_monsoon_2016',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -758,7 +758,7 @@ var bands_18 = median_18.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_18,
-    description: 'landsat5_postmonsoon_2017',
+    description: 'landsat5_monsoon_2017',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -778,13 +778,13 @@ var clusterer18 = ee.Clusterer.wekaKMeans(13).train(training18);
 var result18 = bands_18.cluster(clusterer18).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result18.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2017');
+Map.addLayer(result18.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2017');
 print(result18);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result18,
-    description: 'UC_postmonsoon_2017',
+    description: 'UC_monsoon_2017',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -802,7 +802,7 @@ var bands_19 = median_19.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_19,
-    description: 'landsat5_postmonsoon_2018',
+    description: 'landsat5_monsoon_2018',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -822,13 +822,13 @@ var clusterer19 = ee.Clusterer.wekaKMeans(13).train(training19);
 var result19 = bands_19.cluster(clusterer19).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result19.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2018');
+Map.addLayer(result19.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2018');
 print(result19);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result19,
-    description: 'UC_postmonsoon_2018',
+    description: 'UC_monsoon_2018',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -846,7 +846,7 @@ var bands_20 = median_20.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_20,
-    description: 'landsat5_postmonsoon_2019',
+    description: 'landsat5_monsoon_2019',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -866,13 +866,13 @@ var clusterer20 = ee.Clusterer.wekaKMeans(13).train(training20);
 var result20 = bands_20.cluster(clusterer20).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result20.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2019');
+Map.addLayer(result20.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2019');
 print(result20);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result20,
-    description: 'UC_postmonsoon_2019',
+    description: 'UC_monsoon_2019',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -890,7 +890,7 @@ var bands_21 = median_21.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_21,
-    description: 'landsat5_postmonsoon_2020',
+    description: 'landsat5_monsoon_2020',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -910,13 +910,13 @@ var clusterer21 = ee.Clusterer.wekaKMeans(13).train(training21);
 var result21 = bands_21.cluster(clusterer21).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result21.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2020');
+Map.addLayer(result21.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2020');
 print(result21);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result21,
-    description: 'UC_postmonsoon_2020',
+    description: 'UC_monsoon_2020',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -934,7 +934,7 @@ var bands_22 = median_22.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_22,
-    description: 'landsat5_postmonsoon_2021',
+    description: 'landsat5_monsoon_2021',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -954,13 +954,13 @@ var clusterer22 = ee.Clusterer.wekaKMeans(13).train(training22);
 var result22 = bands_22.cluster(clusterer22).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result22.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2021');
+Map.addLayer(result22.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2021');
 print(result22);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result22,
-    description: 'UC_postmonsoon_2021',
+    description: 'UC_monsoon_2021',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
@@ -978,7 +978,7 @@ var bands_23 = median_23.select(['SR_B2', 'SR_B3', 'SR_B4', 'SR_B5']);
 // Export the image, specifying scale and region.
 Export.image.toDrive({
     image: bands_23,
-    description: 'landsat5_postmonsoon_2022',
+    description: 'landsat5_monsoon_2022',
     folder: 'GEE_Composite',
     scale: 10,
     region: region
@@ -998,13 +998,13 @@ var clusterer23 = ee.Clusterer.wekaKMeans(13).train(training23);
 var result23 = bands_23.cluster(clusterer23).clip(region);
 
 // Display the clusters with random colors.
-Map.addLayer(result23.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_postmonsoon_2022');
+Map.addLayer(result23.randomVisualizer(), { min: 1, max: 252, gamma: 1.8 }, 'clusters_monsoon_2022');
 print(result23);
 
 // Exporting UC composite
 Export.image.toDrive({
     image: result23,
-    description: 'UC_postmonsoon_2022',
+    description: 'UC_monsoon_2022',
     folder: 'GEE_Unsupervised',
     scale: 10,
     region: region,
